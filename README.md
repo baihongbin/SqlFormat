@@ -3,7 +3,11 @@
 主要功能基于**Poor Man's T-SQL Formatter**，地址：https://github.com/TaoK/PoorMansTSqlFormatter#poor-mans-t-sql-formatter  
 在**Poor Man's T-SQL Formatter**的基础上进行了一些改动，以便满足我们自己的需求。
 
-### 版本说明
+***
+**程序已打包放在《SQL格式化_SQL美化工具》文件夹中，可以直接下载使用。**
+***
+
+### 使用.NET框架
 - BaiSqlFormatForm(v1.0)基于.NET Framework 2.0
 - BaiSqlFormatForm2(v2.0)基于.NET Framework 4
 
