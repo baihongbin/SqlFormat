@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiSqlFormatLib", "BaiSqlFormatLib\BaiSqlFormatLib.csproj", "{ADBDFDCA-CAB6-4569-9151-0BD42E65B400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiSqlFormatForm", "BaiSqlFormatForm\BaiSqlFormatForm.csproj", "{949039DF-CB5D-4214-B5C6-470EAC4460A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiSqlFormatForm2", "BaiSqlFormatForm2\BaiSqlFormatForm2.csproj", "{D78DC06C-52B1-4877-9A3E-12DA3C36DBC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADBDFDCA-CAB6-4569-9151-0BD42E65B400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBDFDCA-CAB6-4569-9151-0BD42E65B400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBDFDCA-CAB6-4569-9151-0BD42E65B400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBDFDCA-CAB6-4569-9151-0BD42E65B400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949039DF-CB5D-4214-B5C6-470EAC4460A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949039DF-CB5D-4214-B5C6-470EAC4460A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949039DF-CB5D-4214-B5C6-470EAC4460A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949039DF-CB5D-4214-B5C6-470EAC4460A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78DC06C-52B1-4877-9A3E-12DA3C36DBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78DC06C-52B1-4877-9A3E-12DA3C36DBC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78DC06C-52B1-4877-9A3E-12DA3C36DBC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78DC06C-52B1-4877-9A3E-12DA3C36DBC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
