@@ -25,7 +25,7 @@ namespace BaiSqlFormatForm2
                 Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
                 //添加事件处理非UI线程异常   
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-cn");
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-Hans");
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
 
