@@ -34,6 +34,7 @@ namespace BaiSqlFormatForm
             {
                 chk_default.CheckState = CheckState.Checked;
 
+                chk_addSemicolon.Enabled = false;
                 txt_maxWidth.Enabled = false;
                 chk_columnNotNewline.Enabled = false;
                 chk_keywordAlign.Enabled = false;
@@ -66,6 +67,7 @@ namespace BaiSqlFormatForm
             chk_allIndent.Checked = Properties.Settings.Default.AllIndent;
             chk_asAlign.Checked = Properties.Settings.Default.AsAlign;
             txt_asMaxWidth.Text = Properties.Settings.Default.KeywordLengthOfAs.ToString();
+            chk_addSemicolon.Checked =  Properties.Settings.Default.addSemicolon;
 
             SetFormatter();
             _settingsLoaded = true;
@@ -109,6 +111,7 @@ namespace BaiSqlFormatForm
             //设置默认选项
             if (chk_default.Checked)
             {
+                Properties.Settings.Default.addSemicolon = true;
                 Properties.Settings.Default.chkdefault = true;
                 Properties.Settings.Default.MaxLineWidth = 170;
                 Properties.Settings.Default.ExpandCommaLists = true;  
@@ -127,6 +130,7 @@ namespace BaiSqlFormatForm
             }
             else if(chk_custom.Checked)
             {
+                Properties.Settings.Default.addSemicolon = chk_addSemicolon.Checked;
                 Properties.Settings.Default.chkdefault = false;
                 Properties.Settings.Default.MaxLineWidth = int.Parse(txt_maxWidth.Text);
                 Properties.Settings.Default.ExpandCommaLists = !chk_columnNotNewline.Checked; 
@@ -183,13 +187,17 @@ namespace BaiSqlFormatForm
             string[] sqlInput = _inputSql.Split(new string[] { ";" }, StringSplitOptions.None);
             string SqlHtml = string.Empty;
             int index = 0;
-
+            
             foreach (var sql in sqlInput)
             {
+                string sql_new = string.Empty;
                 if (sql.Trim() != "")
                 {
                     index++;
-                    var tokenizedSql = _tokenizer.TokenizeSQL(sql + ";", sql.Length);
+                    sql_new = sql;
+                    if (Properties.Settings.Default.addSemicolon)
+                        sql_new += ";";
+                    var tokenizedSql = _tokenizer.TokenizeSQL(sql_new, sql_new.Length);
                     var parsedSql = _parser.ParseSQL(tokenizedSql);
                     string subSqlHtml = _formatter.FormatSQLTree(parsedSql);
 
@@ -340,6 +348,7 @@ namespace BaiSqlFormatForm
                 chk_allIndent.CheckState = CheckState.Checked;
                 chk_asAlign.CheckState = CheckState.Checked;
                 txt_asMaxWidth.Text = "35";
+                chk_addSemicolon.CheckState = CheckState.Checked;
 
                 txt_maxWidth.Enabled = false;
                 chk_columnNotNewline.Enabled = false;
@@ -355,6 +364,7 @@ namespace BaiSqlFormatForm
                 chk_allIndent.Enabled = false;
                 chk_asAlign.Enabled = false;
                 txt_asMaxWidth.Enabled = false;
+                chk_addSemicolon.Enabled = false;
             }
             else
                 chk_custom.CheckState = CheckState.Checked;
@@ -382,6 +392,7 @@ namespace BaiSqlFormatForm
                 chk_coloring.Enabled = true;
                 chk_allIndent.Enabled = true;
                 chk_asAlign.Enabled = true;
+                chk_addSemicolon.Enabled = true;
                 
             }
             else

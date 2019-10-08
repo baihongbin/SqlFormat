@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.webBrowser_output = new BaiSqlFormatForm.FrameworkClassReplacements.CustomContentWebBrowser();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_maxWidth = new System.Windows.Forms.TextBox();
@@ -51,11 +51,13 @@
             this.chk_expandBetween = new System.Windows.Forms.CheckBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_input = new BaiSqlFormatForm.FrameworkClassReplacements.SelectableTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addFormatErrLog = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer_TextChangeDelay = new System.Windows.Forms.Timer();
+            this.timer_TextChangeDelay = new System.Windows.Forms.Timer(this.components);
+            this.chk_addSemicolon = new System.Windows.Forms.CheckBox();
+            this.txt_input = new BaiSqlFormatForm.FrameworkClassReplacements.SelectableTextBox();
+            this.webBrowser_output = new BaiSqlFormatForm.FrameworkClassReplacements.CustomContentWebBrowser();
             this.groupBox1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,15 +80,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "输出SQL";
             // 
-            // webBrowser_output
-            // 
-            this.webBrowser_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser_output.Location = new System.Drawing.Point(3, 17);
-            this.webBrowser_output.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser_output.Name = "webBrowser_output";
-            this.webBrowser_output.Size = new System.Drawing.Size(883, 571);
-            this.webBrowser_output.TabIndex = 0;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -100,6 +93,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.chk_addSemicolon);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.txt_maxWidth);
             this.splitContainer1.Panel2.Controls.Add(this.txt_asMaxWidth);
@@ -132,7 +126,7 @@
             // 
             // txt_maxWidth
             // 
-            this.txt_maxWidth.Location = new System.Drawing.Point(226, 125);
+            this.txt_maxWidth.Location = new System.Drawing.Point(226, 138);
             this.txt_maxWidth.Name = "txt_maxWidth";
             this.txt_maxWidth.Size = new System.Drawing.Size(39, 21);
             this.txt_maxWidth.TabIndex = 7;
@@ -141,7 +135,7 @@
             // 
             // txt_asMaxWidth
             // 
-            this.txt_asMaxWidth.Location = new System.Drawing.Point(210, 542);
+            this.txt_asMaxWidth.Location = new System.Drawing.Point(210, 552);
             this.txt_asMaxWidth.Name = "txt_asMaxWidth";
             this.txt_asMaxWidth.Size = new System.Drawing.Size(39, 21);
             this.txt_asMaxWidth.TabIndex = 17;
@@ -151,7 +145,7 @@
             // chk_default
             // 
             this.chk_default.AutoSize = true;
-            this.chk_default.Location = new System.Drawing.Point(40, 48);
+            this.chk_default.Location = new System.Drawing.Point(40, 41);
             this.chk_default.Name = "chk_default";
             this.chk_default.Size = new System.Drawing.Size(132, 16);
             this.chk_default.TabIndex = 0;
@@ -162,7 +156,7 @@
             // chk_asAlign
             // 
             this.chk_asAlign.AutoSize = true;
-            this.chk_asAlign.Location = new System.Drawing.Point(61, 544);
+            this.chk_asAlign.Location = new System.Drawing.Point(61, 554);
             this.chk_asAlign.Name = "chk_asAlign";
             this.chk_asAlign.Size = new System.Drawing.Size(150, 16);
             this.chk_asAlign.TabIndex = 15;
@@ -173,7 +167,7 @@
             // chk_conditionNewline
             // 
             this.chk_conditionNewline.AutoSize = true;
-            this.chk_conditionNewline.Location = new System.Drawing.Point(61, 200);
+            this.chk_conditionNewline.Location = new System.Drawing.Point(61, 210);
             this.chk_conditionNewline.Name = "chk_conditionNewline";
             this.chk_conditionNewline.Size = new System.Drawing.Size(72, 16);
             this.chk_conditionNewline.TabIndex = 2;
@@ -184,7 +178,7 @@
             // chk_uppercaseKeywords
             // 
             this.chk_uppercaseKeywords.AutoSize = true;
-            this.chk_uppercaseKeywords.Location = new System.Drawing.Point(61, 235);
+            this.chk_uppercaseKeywords.Location = new System.Drawing.Point(61, 245);
             this.chk_uppercaseKeywords.Name = "chk_uppercaseKeywords";
             this.chk_uppercaseKeywords.Size = new System.Drawing.Size(84, 16);
             this.chk_uppercaseKeywords.TabIndex = 14;
@@ -195,7 +189,7 @@
             // chk_allUpper
             // 
             this.chk_allUpper.AutoSize = true;
-            this.chk_allUpper.Location = new System.Drawing.Point(61, 275);
+            this.chk_allUpper.Location = new System.Drawing.Point(61, 285);
             this.chk_allUpper.Name = "chk_allUpper";
             this.chk_allUpper.Size = new System.Drawing.Size(90, 16);
             this.chk_allUpper.TabIndex = 4;
@@ -206,7 +200,7 @@
             // chk_keywordAlign
             // 
             this.chk_keywordAlign.AutoSize = true;
-            this.chk_keywordAlign.Location = new System.Drawing.Point(61, 165);
+            this.chk_keywordAlign.Location = new System.Drawing.Point(61, 175);
             this.chk_keywordAlign.Name = "chk_keywordAlign";
             this.chk_keywordAlign.Size = new System.Drawing.Size(72, 16);
             this.chk_keywordAlign.TabIndex = 13;
@@ -217,7 +211,7 @@
             // chk_columnNotNewline
             // 
             this.chk_columnNotNewline.AutoSize = true;
-            this.chk_columnNotNewline.Location = new System.Drawing.Point(61, 127);
+            this.chk_columnNotNewline.Location = new System.Drawing.Point(61, 141);
             this.chk_columnNotNewline.Name = "chk_columnNotNewline";
             this.chk_columnNotNewline.Size = new System.Drawing.Size(168, 16);
             this.chk_columnNotNewline.TabIndex = 5;
@@ -228,7 +222,7 @@
             // chk_allIndent
             // 
             this.chk_allIndent.AutoSize = true;
-            this.chk_allIndent.Location = new System.Drawing.Point(61, 507);
+            this.chk_allIndent.Location = new System.Drawing.Point(61, 517);
             this.chk_allIndent.Name = "chk_allIndent";
             this.chk_allIndent.Size = new System.Drawing.Size(72, 16);
             this.chk_allIndent.TabIndex = 12;
@@ -239,7 +233,7 @@
             // chk_expandCase
             // 
             this.chk_expandCase.AutoSize = true;
-            this.chk_expandCase.Location = new System.Drawing.Point(61, 312);
+            this.chk_expandCase.Location = new System.Drawing.Point(61, 322);
             this.chk_expandCase.Name = "chk_expandCase";
             this.chk_expandCase.Size = new System.Drawing.Size(108, 16);
             this.chk_expandCase.TabIndex = 6;
@@ -250,7 +244,7 @@
             // chk_coloring
             // 
             this.chk_coloring.AutoSize = true;
-            this.chk_coloring.Location = new System.Drawing.Point(61, 468);
+            this.chk_coloring.Location = new System.Drawing.Point(61, 478);
             this.chk_coloring.Name = "chk_coloring";
             this.chk_coloring.Size = new System.Drawing.Size(72, 16);
             this.chk_coloring.TabIndex = 11;
@@ -261,7 +255,7 @@
             // chk_custom
             // 
             this.chk_custom.AutoSize = true;
-            this.chk_custom.Location = new System.Drawing.Point(40, 89);
+            this.chk_custom.Location = new System.Drawing.Point(40, 74);
             this.chk_custom.Name = "chk_custom";
             this.chk_custom.Size = new System.Drawing.Size(60, 16);
             this.chk_custom.TabIndex = 1;
@@ -272,7 +266,7 @@
             // chk_expandOn
             // 
             this.chk_expandOn.AutoSize = true;
-            this.chk_expandOn.Location = new System.Drawing.Point(61, 430);
+            this.chk_expandOn.Location = new System.Drawing.Point(61, 440);
             this.chk_expandOn.Name = "chk_expandOn";
             this.chk_expandOn.Size = new System.Drawing.Size(108, 16);
             this.chk_expandOn.TabIndex = 10;
@@ -283,7 +277,7 @@
             // chk_expandIn
             // 
             this.chk_expandIn.AutoSize = true;
-            this.chk_expandIn.Location = new System.Drawing.Point(61, 391);
+            this.chk_expandIn.Location = new System.Drawing.Point(61, 401);
             this.chk_expandIn.Name = "chk_expandIn";
             this.chk_expandIn.Size = new System.Drawing.Size(96, 16);
             this.chk_expandIn.TabIndex = 9;
@@ -294,7 +288,7 @@
             // chk_expandBetween
             // 
             this.chk_expandBetween.AutoSize = true;
-            this.chk_expandBetween.Location = new System.Drawing.Point(61, 352);
+            this.chk_expandBetween.Location = new System.Drawing.Point(61, 362);
             this.chk_expandBetween.Name = "chk_expandBetween";
             this.chk_expandBetween.Size = new System.Drawing.Size(126, 16);
             this.chk_expandBetween.TabIndex = 8;
@@ -332,19 +326,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "输入SQL";
             // 
-            // txt_input
-            // 
-            this.txt_input.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_input.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt_input.Location = new System.Drawing.Point(3, 17);
-            this.txt_input.Multiline = true;
-            this.txt_input.Name = "txt_input";
-            this.txt_input.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_input.Size = new System.Drawing.Size(1192, 254);
-            this.txt_input.TabIndex = 0;
-            this.txt_input.WordWrap = false;
-            this.txt_input.TextChanged += new System.EventHandler(this.txt_input_TextChanged);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -374,6 +355,39 @@
             // 
             this.timer_TextChangeDelay.Interval = 500;
             this.timer_TextChangeDelay.Tick += new System.EventHandler(this.timer_TextChangeDelay_Tick);
+            // 
+            // chk_addSemicolon
+            // 
+            this.chk_addSemicolon.AutoSize = true;
+            this.chk_addSemicolon.Location = new System.Drawing.Point(61, 108);
+            this.chk_addSemicolon.Name = "chk_addSemicolon";
+            this.chk_addSemicolon.Size = new System.Drawing.Size(168, 16);
+            this.chk_addSemicolon.TabIndex = 19;
+            this.chk_addSemicolon.Text = "疑似单独语句末尾添加分号";
+            this.chk_addSemicolon.UseVisualStyleBackColor = true;
+            this.chk_addSemicolon.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
+            // 
+            // txt_input
+            // 
+            this.txt_input.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_input.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txt_input.Location = new System.Drawing.Point(3, 17);
+            this.txt_input.Multiline = true;
+            this.txt_input.Name = "txt_input";
+            this.txt_input.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txt_input.Size = new System.Drawing.Size(1192, 254);
+            this.txt_input.TabIndex = 0;
+            this.txt_input.WordWrap = false;
+            this.txt_input.TextChanged += new System.EventHandler(this.txt_input_TextChanged);
+            // 
+            // webBrowser_output
+            // 
+            this.webBrowser_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser_output.Location = new System.Drawing.Point(3, 17);
+            this.webBrowser_output.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser_output.Name = "webBrowser_output";
+            this.webBrowser_output.Size = new System.Drawing.Size(883, 571);
+            this.webBrowser_output.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -432,6 +446,7 @@
         private System.Windows.Forms.TextBox txt_asMaxWidth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem addFormatErrLog;
+        private System.Windows.Forms.CheckBox chk_addSemicolon;
     }
 }
 

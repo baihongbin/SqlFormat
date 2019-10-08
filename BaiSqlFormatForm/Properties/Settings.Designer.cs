@@ -202,5 +202,17 @@ namespace BaiSqlFormatForm.Properties {
                 this["chkdefault"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool addSemicolon {
+            get {
+                return ((bool)(this["addSemicolon"]));
+            }
+            set {
+                this["addSemicolon"] = value;
+            }
+        }
     }
 }

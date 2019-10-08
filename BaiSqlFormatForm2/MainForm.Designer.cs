@@ -87,6 +87,8 @@
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.timer_TextChangeDelay = new System.Windows.Forms.Timer(this.components);
+            this.ace_addSemicolon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.chk_addSemicolon = new DevExpress.XtraEditors.CheckEdit();
             this.fluentDesignFormContainer1.SuspendLayout();
             this.xtraUserControl.SuspendLayout();
             this.dockPanel.SuspendLayout();
@@ -115,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_addSemicolon.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -284,11 +287,8 @@
             // 
             this.accordionControl1.Controls.Add(this.ts_default);
             this.accordionControl1.Controls.Add(this.ts_custom);
-            this.accordionControl1.Controls.Add(this.chk_columnNotNewline);
-            this.accordionControl1.Controls.Add(this.txt_maxWidth);
             this.accordionControl1.Controls.Add(this.chk_asAlign);
             this.accordionControl1.Controls.Add(this.txt_asMaxWidth);
-            this.accordionControl1.Controls.Add(this.chk_keywordAlign);
             this.accordionControl1.Controls.Add(this.chk_allUpper);
             this.accordionControl1.Controls.Add(this.chk_expandBetween);
             this.accordionControl1.Controls.Add(this.chk_expandIn);
@@ -298,6 +298,10 @@
             this.accordionControl1.Controls.Add(this.chk_expandCase);
             this.accordionControl1.Controls.Add(this.chk_coloring);
             this.accordionControl1.Controls.Add(this.chk_allIndent);
+            this.accordionControl1.Controls.Add(this.chk_columnNotNewline);
+            this.accordionControl1.Controls.Add(this.txt_maxWidth);
+            this.accordionControl1.Controls.Add(this.chk_keywordAlign);
+            this.accordionControl1.Controls.Add(this.chk_addSemicolon);
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
@@ -420,7 +424,7 @@
             // 
             // chk_keywordAlign
             // 
-            this.chk_keywordAlign.Location = new System.Drawing.Point(188, 307);
+            this.chk_keywordAlign.Location = new System.Drawing.Point(188, 342);
             this.chk_keywordAlign.Name = "chk_keywordAlign";
             this.chk_keywordAlign.Properties.Caption = "";
             this.chk_keywordAlign.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -430,7 +434,7 @@
             // 
             // chk_allUpper
             // 
-            this.chk_allUpper.Location = new System.Drawing.Point(188, 412);
+            this.chk_allUpper.Location = new System.Drawing.Point(188, 447);
             this.chk_allUpper.Name = "chk_allUpper";
             this.chk_allUpper.Properties.Caption = "";
             this.chk_allUpper.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -440,7 +444,7 @@
             // 
             // chk_expandBetween
             // 
-            this.chk_expandBetween.Location = new System.Drawing.Point(188, 482);
+            this.chk_expandBetween.Location = new System.Drawing.Point(188, 517);
             this.chk_expandBetween.Name = "chk_expandBetween";
             this.chk_expandBetween.Properties.Caption = "";
             this.chk_expandBetween.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -450,7 +454,7 @@
             // 
             // chk_expandIn
             // 
-            this.chk_expandIn.Location = new System.Drawing.Point(188, 517);
+            this.chk_expandIn.Location = new System.Drawing.Point(188, 552);
             this.chk_expandIn.Name = "chk_expandIn";
             this.chk_expandIn.Properties.Caption = "";
             this.chk_expandIn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -460,7 +464,7 @@
             // 
             // chk_expandOn
             // 
-            this.chk_expandOn.Location = new System.Drawing.Point(188, 552);
+            this.chk_expandOn.Location = new System.Drawing.Point(188, 587);
             this.chk_expandOn.Name = "chk_expandOn";
             this.chk_expandOn.Properties.Caption = "";
             this.chk_expandOn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -470,7 +474,7 @@
             // 
             // chk_conditionNewline
             // 
-            this.chk_conditionNewline.Location = new System.Drawing.Point(188, 342);
+            this.chk_conditionNewline.Location = new System.Drawing.Point(188, 377);
             this.chk_conditionNewline.Name = "chk_conditionNewline";
             this.chk_conditionNewline.Properties.Caption = "";
             this.chk_conditionNewline.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -480,7 +484,7 @@
             // 
             // chk_uppercaseKeywords
             // 
-            this.chk_uppercaseKeywords.Location = new System.Drawing.Point(188, 377);
+            this.chk_uppercaseKeywords.Location = new System.Drawing.Point(188, 412);
             this.chk_uppercaseKeywords.Name = "chk_uppercaseKeywords";
             this.chk_uppercaseKeywords.Properties.Caption = "";
             this.chk_uppercaseKeywords.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -490,7 +494,7 @@
             // 
             // chk_expandCase
             // 
-            this.chk_expandCase.Location = new System.Drawing.Point(188, 447);
+            this.chk_expandCase.Location = new System.Drawing.Point(188, 482);
             this.chk_expandCase.Name = "chk_expandCase";
             this.chk_expandCase.Properties.Caption = "";
             this.chk_expandCase.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -500,7 +504,7 @@
             // 
             // chk_coloring
             // 
-            this.chk_coloring.Location = new System.Drawing.Point(188, 587);
+            this.chk_coloring.Location = new System.Drawing.Point(188, 622);
             this.chk_coloring.Name = "chk_coloring";
             this.chk_coloring.Properties.Caption = "";
             this.chk_coloring.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -510,7 +514,7 @@
             // 
             // chk_allIndent
             // 
-            this.chk_allIndent.Location = new System.Drawing.Point(188, 622);
+            this.chk_allIndent.Location = new System.Drawing.Point(188, 657);
             this.chk_allIndent.Name = "chk_allIndent";
             this.chk_allIndent.Properties.Caption = "";
             this.chk_allIndent.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -544,6 +548,7 @@
             this.ace_custom.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.ace_columnNotNewline,
             this.ace_asAlign,
+            this.ace_addSemicolon,
             this.ace_keywordAlign,
             this.ace_conditionNewline,
             this.ace_uppercaseKeywords,
@@ -728,6 +733,24 @@
             this.timer_TextChangeDelay.Interval = 500;
             this.timer_TextChangeDelay.Tick += new System.EventHandler(this.timer_TextChangeDelay_Tick);
             // 
+            // ace_addSemicolon
+            // 
+            this.ace_addSemicolon.HeaderControl = this.chk_addSemicolon;
+            this.ace_addSemicolon.Name = "ace_addSemicolon";
+            this.ace_addSemicolon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ace_addSemicolon.Text = "疑似单独语句末尾添加分号";
+            // 
+            // chk_addSemicolon
+            // 
+            this.chk_addSemicolon.Location = new System.Drawing.Point(188, 307);
+            this.chk_addSemicolon.MenuManager = this.ribbonControl1;
+            this.chk_addSemicolon.Name = "chk_addSemicolon";
+            this.chk_addSemicolon.Properties.Caption = "";
+            this.chk_addSemicolon.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_addSemicolon.Size = new System.Drawing.Size(35, 19);
+            this.chk_addSemicolon.TabIndex = 28;
+            this.chk_addSemicolon.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -770,6 +793,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_addSemicolon.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -832,6 +856,8 @@
         private System.Windows.Forms.Timer timer_TextChangeDelay;
         private DevExpress.XtraBars.BarButtonItem btn_addFormatErrLog;
         private DevExpress.XtraBars.BarButtonItem btn_about;
+        private DevExpress.XtraEditors.CheckEdit chk_addSemicolon;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ace_addSemicolon;
     }
 }
 
