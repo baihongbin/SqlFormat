@@ -22,244 +22,195 @@ namespace BaiSqlFormatForm2.Properties {
                 return defaultInstance;
             }
         }
-
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("170")]
-        public int MaxLineWidth
-        {
-            get
-            {
+        public int MaxLineWidth {
+            get {
                 return ((int)(this["MaxLineWidth"]));
             }
-            set
-            {
+            set {
                 this["MaxLineWidth"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool ExpandCommaLists
-        {
-            get
-            {
+        public bool ExpandCommaLists {
+            get {
                 return ((bool)(this["ExpandCommaLists"]));
             }
-            set
-            {
+            set {
                 this["ExpandCommaLists"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool KeywordAlign
-        {
-            get
-            {
+        public bool KeywordAlign {
+            get {
                 return ((bool)(this["KeywordAlign"]));
             }
-            set
-            {
+            set {
                 this["KeywordAlign"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool ExpandBooleanExpressions
-        {
-            get
-            {
+        public bool ExpandBooleanExpressions {
+            get {
                 return ((bool)(this["ExpandBooleanExpressions"]));
             }
-            set
-            {
+            set {
                 this["ExpandBooleanExpressions"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool ExpandCaseStatements
-        {
-            get
-            {
+        public bool ExpandCaseStatements {
+            get {
                 return ((bool)(this["ExpandCaseStatements"]));
             }
-            set
-            {
+            set {
                 this["ExpandCaseStatements"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ExpandBetweenConditions
-        {
-            get
-            {
+        public bool ExpandBetweenConditions {
+            get {
                 return ((bool)(this["ExpandBetweenConditions"]));
             }
-            set
-            {
+            set {
                 this["ExpandBetweenConditions"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ExpandInLists
-        {
-            get
-            {
+        public bool ExpandInLists {
+            get {
                 return ((bool)(this["ExpandInLists"]));
             }
-            set
-            {
+            set {
                 this["ExpandInLists"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool BreakJoinOnSections
-        {
-            get
-            {
+        public bool BreakJoinOnSections {
+            get {
                 return ((bool)(this["BreakJoinOnSections"]));
             }
-            set
-            {
+            set {
                 this["BreakJoinOnSections"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool UppercaseKeywords
-        {
-            get
-            {
+        public bool UppercaseKeywords {
+            get {
                 return ((bool)(this["UppercaseKeywords"]));
             }
-            set
-            {
+            set {
                 this["UppercaseKeywords"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool HTMLColoring
-        {
-            get
-            {
+        public bool HTMLColoring {
+            get {
                 return ((bool)(this["HTMLColoring"]));
             }
-            set
-            {
+            set {
                 this["HTMLColoring"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool AllIndent
-        {
-            get
-            {
+        public bool AllIndent {
+            get {
                 return ((bool)(this["AllIndent"]));
             }
-            set
-            {
+            set {
                 this["AllIndent"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool AsAlign
-        {
-            get
-            {
+        public bool AsAlign {
+            get {
                 return ((bool)(this["AsAlign"]));
             }
-            set
-            {
+            set {
                 this["AsAlign"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool AllUpper
-        {
-            get
-            {
+        public bool AllUpper {
+            get {
                 return ((bool)(this["AllUpper"]));
             }
-            set
-            {
+            set {
                 this["AllUpper"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("35")]
-        public int KeywordLengthOfAs
-        {
-            get
-            {
+        public int KeywordLengthOfAs {
+            get {
                 return ((int)(this["KeywordLengthOfAs"]));
             }
-            set
-            {
+            set {
                 this["KeywordLengthOfAs"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool chkdefault
-        {
-            get
-            {
+        public bool chkdefault {
+            get {
                 return ((bool)(this["chkdefault"]));
             }
-            set
-            {
+            set {
                 this["chkdefault"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool addSemicolon
-        {
-            get
-            {
+        public bool addSemicolon {
+            get {
                 return ((bool)(this["addSemicolon"]));
             }
-            set
-            {
+            set {
                 this["addSemicolon"] = value;
             }
         }
