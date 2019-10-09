@@ -4,6 +4,9 @@ namespace BaiSqlFormatForm.Others
 {
     class WriteLog
     {
+        static object _formatLogLock = new object();
+        static object _errLogLock = new object();
+
         /// <summary>
         /// 记录格式调整错误信息
         /// </summary>
@@ -14,9 +17,14 @@ namespace BaiSqlFormatForm.Others
 
             if (!Directory.Exists(path))  Directory.CreateDirectory(path);
             if (!File.Exists(path + "//" + fileName)) File.Create(path + "//" + fileName);
-            using (StreamWriter file = new StreamWriter(path + "//" + fileName))
+            
+            lock (_formatLogLock)
             {
-                file.Write(content);
+                using (StreamWriter file = new StreamWriter(path + "//" + fileName))
+                {
+                    file.Write(content);
+                    file.Close();
+                }
             }
         }
 
@@ -31,12 +39,14 @@ namespace BaiSqlFormatForm.Others
             {
                 Directory.CreateDirectory("logs");
             }
-
-            using (var sw = new StreamWriter(@"logs\appErrLog.log", true))
+            lock (_errLogLock)
             {
-                sw.WriteLine(content);
-                sw.WriteLine("------------------------------------------------------------------------------------------------------------------------");
-                sw.Close();
+                using (var sw = new StreamWriter(@"logs\appErrLog.log", true))
+                {
+                    sw.WriteLine(content);
+                    sw.WriteLine("------------------------------------------------------------------------------------------------------------------------");
+                    sw.Close();
+                }
             }
         }
     }
