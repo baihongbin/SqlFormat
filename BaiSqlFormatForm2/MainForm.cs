@@ -93,6 +93,9 @@ namespace BaiSqlFormatForm2
             _settingsLoaded = true;
 
         }
+        /// <summary>
+        /// 设置格式化选项
+        /// </summary>
         private void SetFormatter()
         {
             ISqlTreeFormatter innerFormatter;
@@ -124,6 +127,9 @@ namespace BaiSqlFormatForm2
             _formatter = new BaiSqlFormatLib.Formatters.HtmlPageWrapper(innerFormatter);
         }
 
+        /// <summary>
+        /// 保存格式化设置
+        /// </summary>
         private void SaveFormatSettings()
         {
             //设置默认选项
@@ -171,6 +177,9 @@ namespace BaiSqlFormatForm2
             Properties.Settings.Default.Save();
         }
 
+        /// <summary>
+        /// 尝试开始格式化
+        /// </summary>
         public void TryToDoFormatting()
         {
             lock (_refreshLock)
@@ -188,6 +197,9 @@ namespace BaiSqlFormatForm2
         //记录SQL格式调整信息
         string strErrorReturn = string.Empty;
 
+        /// <summary>
+        /// 格式化处理
+        /// </summary>
         public void DoFormatting()
         {
             strErrorReturn = "";
@@ -283,6 +295,11 @@ namespace BaiSqlFormatForm2
             return 0;
         }
 
+        /// <summary>
+        /// sql输入框字符有变动时触发
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer_TextChangeDelay_Tick(object sender, EventArgs e)
         {
             timer_TextChangeDelay.Enabled = false;
@@ -302,6 +319,11 @@ namespace BaiSqlFormatForm2
             TryToDoFormatting();
         }
 
+        /// <summary>
+        /// 格式化选项变更时触发
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormatSettingsControlChanged(object sender, EventArgs e)
         {
             if (!_settingsLoaded)
