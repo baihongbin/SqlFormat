@@ -51,11 +51,8 @@
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.ts_default = new DevExpress.XtraEditors.ToggleSwitch();
             this.ts_custom = new DevExpress.XtraEditors.ToggleSwitch();
-            this.chk_columnNotNewline = new DevExpress.XtraEditors.CheckEdit();
-            this.txt_maxWidth = new DevExpress.XtraEditors.SpinEdit();
             this.chk_asAlign = new DevExpress.XtraEditors.CheckEdit();
             this.txt_asMaxWidth = new DevExpress.XtraEditors.SpinEdit();
-            this.chk_keywordAlign = new DevExpress.XtraEditors.CheckEdit();
             this.chk_allUpper = new DevExpress.XtraEditors.CheckEdit();
             this.chk_expandBetween = new DevExpress.XtraEditors.CheckEdit();
             this.chk_expandIn = new DevExpress.XtraEditors.CheckEdit();
@@ -65,6 +62,10 @@
             this.chk_expandCase = new DevExpress.XtraEditors.CheckEdit();
             this.chk_coloring = new DevExpress.XtraEditors.CheckEdit();
             this.chk_allIndent = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_columnNotNewline = new DevExpress.XtraEditors.CheckEdit();
+            this.txt_maxWidth = new DevExpress.XtraEditors.SpinEdit();
+            this.chk_keywordAlign = new DevExpress.XtraEditors.CheckEdit();
+            this.chk_addSemicolon = new DevExpress.XtraEditors.CheckEdit();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_default = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_custom = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -72,6 +73,7 @@
             this.ace_maxWidth = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_asAlign = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_asMaxWidth = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ace_addSemicolon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_keywordAlign = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_conditionNewline = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ace_uppercaseKeywords = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -87,8 +89,6 @@
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.timer_TextChangeDelay = new System.Windows.Forms.Timer(this.components);
-            this.ace_addSemicolon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.chk_addSemicolon = new DevExpress.XtraEditors.CheckEdit();
             this.fluentDesignFormContainer1.SuspendLayout();
             this.xtraUserControl.SuspendLayout();
             this.dockPanel.SuspendLayout();
@@ -99,11 +99,8 @@
             this.accordionControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ts_default.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ts_custom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_columnNotNewline.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_maxWidth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_asAlign.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_asMaxWidth.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_keywordAlign.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_allUpper.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_expandBetween.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_expandIn.Properties)).BeginInit();
@@ -113,11 +110,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_expandCase.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_coloring.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_allIndent.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_columnNotNewline.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_maxWidth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_keywordAlign.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_addSemicolon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_addSemicolon.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -336,49 +336,6 @@
             this.ts_custom.TabIndex = 3;
             this.ts_custom.Toggled += new System.EventHandler(this.ts_custom_Toggled);
             // 
-            // chk_columnNotNewline
-            // 
-            this.chk_columnNotNewline.Location = new System.Drawing.Point(188, 165);
-            this.chk_columnNotNewline.Name = "chk_columnNotNewline";
-            this.chk_columnNotNewline.Properties.Caption = "";
-            this.chk_columnNotNewline.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk_columnNotNewline.Size = new System.Drawing.Size(35, 19);
-            this.chk_columnNotNewline.TabIndex = 4;
-            this.chk_columnNotNewline.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
-            // 
-            // txt_maxWidth
-            // 
-            this.txt_maxWidth.EditValue = new decimal(new int[] {
-            170,
-            0,
-            0,
-            0});
-            this.txt_maxWidth.Location = new System.Drawing.Point(168, 200);
-            this.txt_maxWidth.Name = "txt_maxWidth";
-            this.txt_maxWidth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txt_maxWidth.Properties.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.txt_maxWidth.Properties.IsFloatValue = false;
-            this.txt_maxWidth.Properties.Mask.EditMask = "N00";
-            this.txt_maxWidth.Properties.MaxValue = new decimal(new int[] {
-            800,
-            0,
-            0,
-            0});
-            this.txt_maxWidth.Properties.MinValue = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.txt_maxWidth.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_maxWidth.Size = new System.Drawing.Size(55, 20);
-            this.txt_maxWidth.TabIndex = 5;
-            this.txt_maxWidth.EditValueChanged += new System.EventHandler(this.FormatSettingsControlChanged);
-            // 
             // chk_asAlign
             // 
             this.chk_asAlign.Location = new System.Drawing.Point(188, 236);
@@ -421,16 +378,6 @@
             this.txt_asMaxWidth.Size = new System.Drawing.Size(55, 20);
             this.txt_asMaxWidth.TabIndex = 7;
             this.txt_asMaxWidth.EditValueChanged += new System.EventHandler(this.FormatSettingsControlChanged);
-            // 
-            // chk_keywordAlign
-            // 
-            this.chk_keywordAlign.Location = new System.Drawing.Point(188, 342);
-            this.chk_keywordAlign.Name = "chk_keywordAlign";
-            this.chk_keywordAlign.Properties.Caption = "";
-            this.chk_keywordAlign.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk_keywordAlign.Size = new System.Drawing.Size(35, 19);
-            this.chk_keywordAlign.TabIndex = 8;
-            this.chk_keywordAlign.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
             // 
             // chk_allUpper
             // 
@@ -522,6 +469,70 @@
             this.chk_allIndent.TabIndex = 25;
             this.chk_allIndent.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
             // 
+            // chk_columnNotNewline
+            // 
+            this.chk_columnNotNewline.Location = new System.Drawing.Point(188, 165);
+            this.chk_columnNotNewline.Name = "chk_columnNotNewline";
+            this.chk_columnNotNewline.Properties.Caption = "";
+            this.chk_columnNotNewline.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_columnNotNewline.Size = new System.Drawing.Size(35, 19);
+            this.chk_columnNotNewline.TabIndex = 4;
+            this.chk_columnNotNewline.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
+            // 
+            // txt_maxWidth
+            // 
+            this.txt_maxWidth.EditValue = new decimal(new int[] {
+            170,
+            0,
+            0,
+            0});
+            this.txt_maxWidth.Location = new System.Drawing.Point(168, 200);
+            this.txt_maxWidth.Name = "txt_maxWidth";
+            this.txt_maxWidth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_maxWidth.Properties.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.txt_maxWidth.Properties.IsFloatValue = false;
+            this.txt_maxWidth.Properties.Mask.EditMask = "N00";
+            this.txt_maxWidth.Properties.MaxValue = new decimal(new int[] {
+            800,
+            0,
+            0,
+            0});
+            this.txt_maxWidth.Properties.MinValue = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.txt_maxWidth.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_maxWidth.Size = new System.Drawing.Size(55, 20);
+            this.txt_maxWidth.TabIndex = 5;
+            this.txt_maxWidth.EditValueChanged += new System.EventHandler(this.FormatSettingsControlChanged);
+            // 
+            // chk_keywordAlign
+            // 
+            this.chk_keywordAlign.Location = new System.Drawing.Point(188, 342);
+            this.chk_keywordAlign.Name = "chk_keywordAlign";
+            this.chk_keywordAlign.Properties.Caption = "";
+            this.chk_keywordAlign.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_keywordAlign.Size = new System.Drawing.Size(35, 19);
+            this.chk_keywordAlign.TabIndex = 8;
+            this.chk_keywordAlign.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
+            // 
+            // chk_addSemicolon
+            // 
+            this.chk_addSemicolon.Location = new System.Drawing.Point(188, 307);
+            this.chk_addSemicolon.MenuManager = this.ribbonControl1;
+            this.chk_addSemicolon.Name = "chk_addSemicolon";
+            this.chk_addSemicolon.Properties.Caption = "";
+            this.chk_addSemicolon.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_addSemicolon.Size = new System.Drawing.Size(35, 19);
+            this.chk_addSemicolon.TabIndex = 28;
+            this.chk_addSemicolon.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
+            // 
             // accordionControlElement1
             // 
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
@@ -605,6 +616,13 @@
             this.ace_asMaxWidth.Name = "ace_asMaxWidth";
             this.ace_asMaxWidth.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ace_asMaxWidth.Text = "字段最大长度";
+            // 
+            // ace_addSemicolon
+            // 
+            this.ace_addSemicolon.HeaderControl = this.chk_addSemicolon;
+            this.ace_addSemicolon.Name = "ace_addSemicolon";
+            this.ace_addSemicolon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ace_addSemicolon.Text = "疑似单独语句末尾添加分号";
             // 
             // ace_keywordAlign
             // 
@@ -733,24 +751,6 @@
             this.timer_TextChangeDelay.Interval = 500;
             this.timer_TextChangeDelay.Tick += new System.EventHandler(this.timer_TextChangeDelay_Tick);
             // 
-            // ace_addSemicolon
-            // 
-            this.ace_addSemicolon.HeaderControl = this.chk_addSemicolon;
-            this.ace_addSemicolon.Name = "ace_addSemicolon";
-            this.ace_addSemicolon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ace_addSemicolon.Text = "疑似单独语句末尾添加分号";
-            // 
-            // chk_addSemicolon
-            // 
-            this.chk_addSemicolon.Location = new System.Drawing.Point(188, 307);
-            this.chk_addSemicolon.MenuManager = this.ribbonControl1;
-            this.chk_addSemicolon.Name = "chk_addSemicolon";
-            this.chk_addSemicolon.Properties.Caption = "";
-            this.chk_addSemicolon.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk_addSemicolon.Size = new System.Drawing.Size(35, 19);
-            this.chk_addSemicolon.TabIndex = 28;
-            this.chk_addSemicolon.CheckedChanged += new System.EventHandler(this.FormatSettingsControlChanged);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -763,7 +763,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
-            this.Text = "SQL代码格式调整工具 v2.0";
+            this.Text = " ";
             this.fluentDesignFormContainer1.ResumeLayout(false);
             this.fluentDesignFormContainer1.PerformLayout();
             this.xtraUserControl.ResumeLayout(false);
@@ -775,11 +775,8 @@
             this.accordionControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ts_default.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ts_custom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_columnNotNewline.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_maxWidth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_asAlign.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_asMaxWidth.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_keywordAlign.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_allUpper.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_expandBetween.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_expandIn.Properties)).EndInit();
@@ -789,11 +786,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chk_expandCase.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_coloring.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_allIndent.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_columnNotNewline.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_maxWidth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_keywordAlign.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_addSemicolon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_addSemicolon.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
