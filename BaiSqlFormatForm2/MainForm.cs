@@ -251,7 +251,7 @@ namespace BaiSqlFormatForm2
                     errorReturn.Append("第 " + index + " 个子SQL解析结果：\r\n" + subSqlParsed + txtNewLine);
                     errorReturn.Append("第 " + index + " 个子SQL生成html结果：\r\n" + subSqlHtml + txtNewLine);
                     SqlHtml += subSqlHtml;
-                    if(index > 1)
+                    if (index > 1)
                         SqlTokenized += "------------------------分割线------------------------\r\n";
                     SqlTokenized += subSqlTokenized;
                     SqlParsed += subSqlParsed;
@@ -337,24 +337,24 @@ namespace BaiSqlFormatForm2
             int asMaxWidth = 0;
             if (!int.TryParse(txt_maxWidth.Text, out maxWidth))
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("请在【单行最大长度】中输入数字！", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("请在【单行最大长度】中输入数字！", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_maxWidth.Text = "170";
                 return;
             }
             else if (maxWidth < 0 || maxWidth > 800)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("【单行最大长度】超出范围！最大值800 ", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("【单行最大长度】超出范围！最大值800 ", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (!int.TryParse(txt_asMaxWidth.Text, out asMaxWidth))
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("请在【字段最大长度】中输入数字！", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("请在【字段最大长度】中输入数字！", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_asMaxWidth.Text = "35";
                 return;
             }
             else if (asMaxWidth < 0 || asMaxWidth > 500)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("【字段最大长度】超出范围！最大值500 ", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("【字段最大长度】超出范围！最大值500 ", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_asMaxWidth.Text = "35";
                 return;
             }
@@ -449,7 +449,7 @@ namespace BaiSqlFormatForm2
             label.Parent = result;
             label.Appearance.Font = new Font("Tahoma", 25.25F);
             label.Appearance.ForeColor = Color.Gray;
-            label.Dock = System.Windows.Forms.DockStyle.Fill;
+            label.Dock = DockStyle.Fill;
             label.AutoSizeMode = LabelAutoSizeMode.None;
             label.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             label.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -457,18 +457,18 @@ namespace BaiSqlFormatForm2
 
             SplitContainerControl scc = new SplitContainerControl();
             scc.Parent = label;
-            scc.Dock = System.Windows.Forms.DockStyle.Fill;
+            scc.Dock = DockStyle.Fill;
             scc.Appearance.ForeColor = Color.Gray;
             scc.PanelVisibility = SplitPanelVisibility.Both;
             scc.SplitterPosition = 500;
 
             GroupControl control1 = new GroupControl();
             control1.Parent = scc.Panel1;
-            control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            control1.Dock = DockStyle.Fill;
 
             GroupControl control2 = new GroupControl();
             control2.Parent = scc.Panel2;
-            control2.Dock = System.Windows.Forms.DockStyle.Fill;
+            control2.Dock = DockStyle.Fill;
 
             if (text == "SQL格式调整")
             {
@@ -477,15 +477,15 @@ namespace BaiSqlFormatForm2
 
                 txt_input = new SelectableTextBox();
                 txt_input.Parent = control1;
-                txt_input.Dock = System.Windows.Forms.DockStyle.Fill;
+                txt_input.Dock = DockStyle.Fill;
                 txt_input.Multiline = true;
                 txt_input.Font = new Font("Consolas", 8.5F);
                 txt_input.ScrollBars = ScrollBars.Both;
-                this.txt_input.TextChanged += new System.EventHandler(this.txt_input_TextChanged);
+                this.txt_input.TextChanged += new EventHandler(this.txt_input_TextChanged);
 
                 webBrowser = new CustomContentWebBrowser();
                 webBrowser.Parent = control2;
-                webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+                webBrowser.Dock = DockStyle.Fill;
             }
             else if (text == "SQL解析记录")
             {
@@ -495,14 +495,14 @@ namespace BaiSqlFormatForm2
                 scc.SplitterPosition = 570;
                 txt_tokenized = new SelectableTextBox();
                 txt_tokenized.Parent = control1;
-                txt_tokenized.Dock = System.Windows.Forms.DockStyle.Fill;
+                txt_tokenized.Dock = DockStyle.Fill;
                 txt_tokenized.Multiline = true;
                 txt_tokenized.ReadOnly = true;
                 txt_tokenized.ScrollBars = ScrollBars.Both;
 
                 txt_parsed = new SelectableTextBox();
                 txt_parsed.Parent = control2;
-                txt_parsed.Dock = System.Windows.Forms.DockStyle.Fill;
+                txt_parsed.Dock = DockStyle.Fill;
                 txt_parsed.Multiline = true;
                 txt_parsed.ReadOnly = true;
                 txt_parsed.ScrollBars = ScrollBars.Both;
@@ -549,22 +549,22 @@ namespace BaiSqlFormatForm2
         {
             if (string.IsNullOrEmpty(txt_input.Text) || string.IsNullOrEmpty(strErrorReturn))
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("添加失败，输入信息为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("添加失败，输入信息为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (string.IsNullOrEmpty(strErrorReturn))
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("添加失败，格式调整日志为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("添加失败，格式调整日志为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             string path = AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "logs";
             WriteLog.WriteFormatLog(path, "formatErrLog.log", strErrorReturn);
-            DevExpress.XtraEditors.XtraMessageBox.Show("已添加到错误日志！如有疑问，请联系作者", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("已添加到错误日志！如有疑问，请联系作者", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_about_ItemClick(object sender, ItemClickEventArgs e)
         {
-            AboutBox about = new BaiSqlFormatForm2.AboutBox();
+            AboutBox about = new AboutBox();
             about.StartPosition = FormStartPosition.CenterParent;
             about.ShowDialog();
         }

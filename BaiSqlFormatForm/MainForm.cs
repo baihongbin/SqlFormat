@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BaiSqlFormatForm
 {
-    public partial class MainForm : System.Windows.Forms.Form
+    public partial class MainForm : Form
     {
 
         bool _queuedRefresh = false;

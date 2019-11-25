@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 using BaiSqlFormatForm.Others;
 using System.Threading;
@@ -20,7 +18,7 @@ namespace BaiSqlFormatForm
                 //添加事件处理程序未捕获的异常   
                 Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
                 //添加事件处理UI线程异常   
-                Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+                Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
                 //添加事件处理非UI线程异常   
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 
