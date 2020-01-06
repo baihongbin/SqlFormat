@@ -97,7 +97,7 @@ namespace BaiSqlFormatForm2
             ISqlTreeFormatter innerFormatter;
             innerFormatter = new BaiSqlFormatLib.Formatters.TSqlStandardFormatter(new BaiSqlFormatLib.Formatters.TSqlStandardFormatterOptions
             {
-                IndentString = "\\s\\s\\s\\s", //缩进内容
+                IndentString = "\\s\\s\\s\\s", //缩进内容 即4个空格
                 SpacesPerTab = 4,
                 MaxLineWidth = Properties.Settings.Default.MaxLineWidth, //单行字符串最大长度
                 ExpandCommaLists = Properties.Settings.Default.ExpandCommaLists,  //false 字段换行 
@@ -193,6 +193,8 @@ namespace BaiSqlFormatForm2
         //记录SQL格式调整信息
         string strErrorReturn = string.Empty;
 
+        static string newLine = "\r\n";
+
         /// <summary>
         /// 格式化处理
         /// </summary>
@@ -201,8 +203,8 @@ namespace BaiSqlFormatForm2
             strErrorReturn = "";
             const string txtNewLine = "\r\n---------------------------------------------------------------------------------------------------------------------------------------------------------\r\n\r\n";
             StringBuilder errorReturn = new StringBuilder();
-            errorReturn.Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n");
-            errorReturn.Append("输入SQL：\r\n" + txt_input.Text + txtNewLine);
+            errorReturn.Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append(newLine);
+            errorReturn.Append("输入SQL：").Append(newLine).Append(txt_input.Text).Append(txtNewLine);
 
             string _inputSql = txt_input.Text.ToLower();
             if (Properties.Settings.Default.AllUpper)
@@ -233,7 +235,7 @@ namespace BaiSqlFormatForm2
                          && !subSqlHtml.ToLower().Contains(">comment<") && !subSqlHtml.ToLower().Contains(">string<")
                         && !subSqlHtml.ToLower().Contains(">int<") && !subSqlHtml.ToLower().Contains(">bigint<")
                         && !subSqlHtml.ToLower().Contains(">partitioned<") &&
-                        ts_default.IsOn && SubstringCount(subSqlHtml, "\r\n") > 110)
+                        ts_default.IsOn && SubstringCount(subSqlHtml, txtNewLine) > 110)
                     {
                         Properties.Settings.Default.ExpandCommaLists = false;
                         Properties.Settings.Default.ExpandCaseStatements = false;
