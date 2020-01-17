@@ -363,7 +363,8 @@ namespace BaiSqlFormatLib.Formatters
                         SubstringCount(useHtml, "<span class=\"SQLOperator\">") * 33 -
                         SubstringCount(useHtml, "<span class=\"SQLKeyword\">") * 32 -
                         SubstringCount(useHtml, "<span class=\"SQLCode\">") * 29 -
-                        SubstringCount(useHtml, "<span class=\"SQLString\">") * 31
+                        SubstringCount(useHtml, "<span class=\"SQLString\">") * 31 -
+                        SubstringCount(useHtml, "<span class=\"SQLFunction\">") * 33
                         + chineseCount;
                     if (strLen <= keywordLengthOfAs)
                     {
@@ -430,7 +431,8 @@ namespace BaiSqlFormatLib.Formatters
                         SubstringCount(useHtml, "<span class=\"SQLOperator\">") * 33 -
                         SubstringCount(useHtml, "<span class=\"SQLKeyword\">") * 32 -
                         SubstringCount(useHtml, "<span class=\"SQLCode\">") * 29 -
-                        SubstringCount(useHtml, "<span class=\"SQLString\">") * 31
+                        SubstringCount(useHtml, "<span class=\"SQLString\">") * 31 -
+                        SubstringCount(useHtml, "<span class=\"SQLFunction\">") * 33
                         + chineseCount;
 
                     if (strLen <= keywordLengthOfAs && strLen >= 0)
